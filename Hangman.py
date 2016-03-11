@@ -9,7 +9,7 @@ def getWordText(letters, word):
         else:
             wordtext += "_ "
     return wordtext
-
+    
 def check(event):
     global lives
     if lives == 0:
