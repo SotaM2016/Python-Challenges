@@ -1,0 +1,15 @@
+Answer 1:
+SELECT population FROM world
+  WHERE name = 'Germany'
+
+Answer 2:
+SELECT name, gdp/population FROM world
+  WHERE area > 5000000
+
+Answer 3:
+SELECT name, population FROM world
+  WHERE name IN ('Ireland', 'Iceland', 'Denmark');
+
+Answer 4:
+SELECT name, area FROM world
+  WHERE area BETWEEN 200000 AND 250000
