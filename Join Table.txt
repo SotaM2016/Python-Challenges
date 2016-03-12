@@ -1,0 +1,46 @@
+Answer 1:
+SELECT matchid, player FROM goal 
+  WHERE teamid LIKE 'GER'
+
+Answer 2:
+SELECT id,stadium,team1,team2
+  FROM game
+WHERE id LIKE '1012'
+
+Answer 3:
+SELECT player, teamid, stadium, mdate
+  FROM game JOIN goal ON (id=matchid)
+WHERE teamid LIKE 'GER'
+
+Answer 4:
+SELECT team1, team2, player
+  FROM game JOIN goal ON (id=matchid)
+WHERE player LIKE 'Mario%'
+
+Answer 5:
+SELECT player, teamid, coach, gtime
+  FROM goal JOIN eteam ON (teamid=id)
+ WHERE gtime<=10
+
+Answer 6:
+SELECT mdate, teamname
+  FROM game JOIN eteam ON (team1=eteam.id)
+WHERE coach LIKE 'Fernando Santos'
+
+Answer 7:
+SELECT player
+  FROM game JOIN goal ON (id=matchid)
+WHERE stadium LIKE 'National Stadium, Warsaw'
+
+Answer 8:
+SELECT DISTINCT player
+  FROM game JOIN goal ON matchid = id
+WHERE ((team1='GER' OR team2='GER') AND teamid !='GER')
+# Hint has been looked at
+
+Answer 9:
+SELECT teamname, COUNT(*)
+  FROM eteam JOIN goal ON id=teamid
+ GROUP BY teamname
+# Hint has been looked at
+
