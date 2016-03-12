@@ -1,0 +1,65 @@
+Answer 1:
+SELECT name FROM world
+  WHERE name LIKE 'Y%'
+
+Answer 2:
+SELECT name FROM world
+  WHERE name LIKE '%Y'
+
+Answer 3:
+SELECT name FROM world
+  WHERE name LIKE '%X%'
+
+Answer 4:
+SELECT name FROM world
+  WHERE name LIKE '%land'
+
+Answer 5:
+SELECT name FROM world
+  WHERE name LIKE 'C%ia'
+
+Answer 6:
+SELECT name FROM world
+  WHERE name LIKE '%oo%'
+
+Answer 7:
+SELECT name FROM world
+  WHERE name LIKE '%a%a%a%'
+
+Answer 8:
+SELECT name FROM world
+ WHERE name LIKE '_t%'
+ORDER BY name
+
+Answer 9:
+SELECT name FROM world
+ WHERE name LIKE '%o__o%'
+
+Answer 10:
+SELECT name FROM world
+ WHERE name LIKE '____'
+
+Answer 11:
+SELECT name
+  FROM world
+ WHERE name LIKE capital
+
+Answer 12:
+SELECT name
+  FROM world
+ WHERE capital LIKE concat(name, ' City')
+
+Answer 13:
+SELECT capital, name
+  FROM world
+WHERE capital LIKE concat('%', name, '%')
+
+Answer 14:
+SELECT name, capital
+  FROM world
+WHERE capital LIKE concat(name, '_', '%')
+
+Answer 15:
+SELECT name, REPLACE(capital, name, '')
+  FROM world
+WHERE capital LIKE concat(name, '_', '%')
